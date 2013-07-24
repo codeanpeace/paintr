@@ -1,0 +1,27 @@
+%h1 Paintr
+
+#selected_color.box
+
+#color_form
+  = text_field_tag 'color', nil, :autofocus => true
+  = button_tag 'Add Color', :id =>  'add_color'
+
+#colors
+
+
+#selected_background.box
+
+#background_form
+  = text_field_tag 'background', nil, :autofocus => true
+  = button_tag 'Add Background', :id =>  'add_background'
+
+#backgrounds
+
+
+#canvas
+  - 10000.times do
+    .paint_box
+
+
+%script{:src => "base64.js", :type => "text/javascript"}
+%script{:src => "canvas2image.js", :type => "text/javascript"}
